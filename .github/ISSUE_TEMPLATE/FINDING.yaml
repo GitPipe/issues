@@ -74,11 +74,8 @@ body:
       description: List of people who must approve. See documentation on the review process for guidance on who should be included in this list.
       options:
         - label: InfoSec
-        - description: InfoSec ...
         - label: OffSec
-        - description: OffSec ...
         - label: Product Owners
-        - description: OffSec ...
   - type: input
     id: contact
     attributes:

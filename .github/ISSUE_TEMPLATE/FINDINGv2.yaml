@@ -1,6 +1,6 @@
-name: Vulnerability Report
+name: Vulnerability Report 1
 description: File a vulnerability report
-title: "[Vulnerability]: "
+title: "[Vulnerability 1]: "
 labels: ["security", "triage"]
 assignees:
   - infosec

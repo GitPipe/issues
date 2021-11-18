@@ -1,7 +1,7 @@
 name: Vulnerability Report
 description: File a vulnerability report
 title: "Vulnerability: "
-labels: ["security", "triage"]
+labels: ["security", "triage", "bug"]
 assignees:
   - infosec
 body:
@@ -13,8 +13,7 @@ body:
     id: description
     attributes:
       label: Description
-      description: Vulnerability Description
-      placeholder: Tell us what you see!
+      description: Vulnerability description
       value: "Buffalo overflow in ..."
     validations:
       required: true
@@ -54,8 +53,7 @@ body:
     attributes:
       label: Recommendation
       description: Recommendation
-      placeholder: Recommendation
-      value: "Validate the number of buffalos..."
+      placeholder: "Validate the number of buffalos..."
     validations:
       required: false
   - type: textarea

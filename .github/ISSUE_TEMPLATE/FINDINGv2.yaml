@@ -1,0 +1,75 @@
+name: Vulnerability Report
+description: File a vulnerability report
+title: "[Vulnerability]: "
+labels: ["security", "triage"]
+assignees:
+  - infosec
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this report!
+  - type: textarea
+    id: Description
+    attributes:
+      label: Vulnerability details
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "Bufalo overflow in ..."
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+    validations:
+      required: false
+  - type: dropdown
+    id: risk
+    attributes:
+      label: Risk
+      description: Risk rating
+      options:
+        - Info
+        - Low
+        - Medium
+        - High
+        - Critical
+    validations:
+      required: true
+  - type: textarea
+    id: Due
+    attributes:
+      label: Due date
+      description: Expected deadline?
+      placeholder: Deadline
+      value: "January 1, 1970"
+    validations:
+      required: false
+  - type: textarea
+    id: Recommendation
+    attributes:
+      label: Recommendation
+      description: Recommendation
+      placeholder: Deadline
+      value: "Validate the number of bufalos..."
+    validations:
+      required: false
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true

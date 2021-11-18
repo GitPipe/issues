@@ -13,15 +13,15 @@ body:
     id: description
     attributes:
       label: Description
-      description: Vulnerability details
+      description: Vulnerability Description
       placeholder: Tell us what you see!
       value: "Buffalo overflow in ..."
     validations:
       required: true
   - type: textarea
-    id: logs
+    id: details
     attributes:
-      label: Relevant output
+      label: Vulnerability details
       description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       value: "Segmentation fault ...."
       render: shell

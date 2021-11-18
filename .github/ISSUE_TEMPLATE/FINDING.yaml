@@ -25,7 +25,7 @@ body:
       placeholder: "Segmentation fault ...."
       render: shell
     validations:
-      required: false
+      required: true
   - type: dropdown
     id: risk
     attributes:
@@ -44,10 +44,9 @@ body:
     attributes:
       label: Due date
       description: Expected deadline?
-      placeholder: Deadline
-      value: "January 1, 1970"
+      placeholder: "January 1, 1970"
     validations:
-      required: false
+      required: true
   - type: textarea
     id: recommendation
     attributes:
@@ -61,8 +60,7 @@ body:
     attributes:
       label: Actions
       description: Actions
-      placeholder: Actions
-      value: "Block the maximum number of buffalos..."
+      placeholder: "Block the maximum number of buffalos..."
     validations:
       required: false
   - type: checkboxes

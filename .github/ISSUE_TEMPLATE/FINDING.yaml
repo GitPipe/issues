@@ -14,7 +14,7 @@ body:
     attributes:
       label: Description
       description: Vulnerability description
-      value: "Buffalo overflow in ..."
+      placeholder: "Buffalo overflow in ..."
     validations:
       required: true
   - type: textarea
@@ -22,7 +22,7 @@ body:
     attributes:
       label: Vulnerability details
       description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      value: "Segmentation fault ...."
+      placeholder: "Segmentation fault ...."
       render: shell
     validations:
       required: false

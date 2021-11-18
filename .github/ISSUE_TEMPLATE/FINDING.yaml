@@ -1,14 +1,72 @@
-name: Bug Report
-description: File a bug report
-title: "[Bug]: "
-labels: ["bug", "triage"]
+name: Vulnerability Report
+description: File a vulnerability report
+title: "[Vulnerability]: "
+labels: ["security", "triage"]
 assignees:
-  - octocat
+  - infosec
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        Thanks for taking the time to fill out this report!
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Vulnerability details
+      placeholder: Tell us what you see!
+      value: "Bufalo overflow in ..."
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      value: "Segmentation fault ...."
+      render: shell
+    validations:
+      required: false
+  - type: dropdown
+    id: risk
+    attributes:
+      label: Risk
+      description: Risk rating
+      options:
+        - Info
+        - Low
+        - Medium
+        - High
+        - Critical
+    validations:
+      required: true
+  - type: textarea
+    id: due
+    attributes:
+      label: Due date
+      description: Expected deadline?
+      placeholder: Deadline
+      value: "January 1, 1970"
+    validations:
+      required: false
+  - type: textarea
+    id: recommendation
+    attributes:
+      label: Recommendation
+      description: Recommendation
+      placeholder: Recommendation
+      value: "Validate the number of bufalos..."
+    validations:
+      required: false
+  - type: textarea
+    id: actions
+    attributes:
+      label: Actions
+      description: Actions
+      placeholder: Actions
+      value: "Block the maximum number of bufalos..."
+    validations:
+      required: false
   - type: input
     id: contact
     attributes:
@@ -17,41 +75,15 @@ body:
       placeholder: ex. email@example.com
     validations:
       required: false
-  - type: textarea
-    id: what-happened
+  - type: checkboxes
+    id: approvers
     attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
-    validations:
-      required: true
-  - type: dropdown
-    id: version
-    attributes:
-      label: Version
-      description: What version of our software are you running?
+      label: Approvers
+      description: List of people who must approve. See documentation on the review process for guidance on who should be included in this list.
       options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
-    validations:
-      required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
-  - type: textarea
-    id: logs
-    attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
+        - label: InfoSec
+        - label: OffSec
+        - label: Product Owners
   - type: checkboxes
     id: terms
     attributes:
